@@ -20,7 +20,7 @@ problem_mapping = {
                 "total": 10000
             },
             "Java: Parity.java": {
-                "passed": 0,
+                "passed": 10000,
                 "total": 10000
             },
             "Python: parity.py": {
@@ -65,7 +65,7 @@ problem_mapping = {
                 "passed": 0,
                 "total": 10000
             },
-            "Python: closest_int_same_weight.py": { 
+            "Python: closest_int_same_weight.py": {
                 "passed": 0,
                 "total": 10000
             }
@@ -190,7 +190,7 @@ problem_mapping = {
                 "total": 204
             },
             "Java: DutchNationalFlag.java": {
-                "passed": 0,
+                "passed": 204,
                 "total": 204
             },
             "Python: dutch_national_flag.py": {
@@ -260,7 +260,7 @@ problem_mapping = {
                 "total": 402
             },
             "Java: BuyAndSellStock.java": {
-                "passed": 0,
+                "passed": 402,
                 "total": 402
             },
             "Python: buy_and_sell_stock.py": {
@@ -486,7 +486,7 @@ problem_mapping = {
                 "total": 15002
             },
             "Java: StringIntegerInterconversion.java": {
-                "passed": 0,
+                "passed": 15002,
                 "total": 15002
             },
             "Python: string_integer_interconversion.py": {
@@ -694,7 +694,7 @@ problem_mapping = {
                 "total": 501
             },
             "Java: SortedListsMerge.java": {
-                "passed": 0,
+                "passed": 501,
                 "total": 501
             },
             "Python: sorted_lists_merge.py": {
