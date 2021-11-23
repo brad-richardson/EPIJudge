@@ -4,6 +4,8 @@ import epi.test_framework.EpiUserType;
 import epi.test_framework.GenericTest;
 
 import java.util.List;
+import java.util.ArrayList;
+import java.util.Collections;
 public class TaskPairing {
   @EpiUserType(ctorParams = {Integer.class, Integer.class})
 
@@ -40,8 +42,16 @@ public class TaskPairing {
 
   public static List<PairedTasks>
   optimumTaskAssignment(List<Integer> taskDurations) {
-    // TODO - you fill in here.
-    return null;
+    Collections.sort(taskDurations);
+    List<PairedTasks> tasks = new ArrayList<>();
+    int i = 0;
+    int j = taskDurations.size() - 1;
+    while (i < j) {
+      tasks.add(new PairedTasks(taskDurations.get(i), taskDurations.get(j)));
+      i++;
+      j--;
+    }
+    return tasks;
   }
 
   public static void main(String[] args) {

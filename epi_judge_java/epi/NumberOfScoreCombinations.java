@@ -7,10 +7,21 @@ public class NumberOfScoreCombinations {
   @EpiTest(testDataFile = "number_of_score_combinations.tsv")
 
   public static int
-  numCombinationsForFinalScore(int finalScore,
-                               List<Integer> individualPlayScores) {
-    // TODO - you fill in here.
-    return 0;
+  numCombinationsForFinalScore(int finalScore, List<Integer> individualPlayScores) {
+    int result = 0;
+    for (int i = 0; i < individualPlayScores.size(); i++) {
+      int sum = individualPlayScores.get(i);
+      if (sum == finalScore) {
+        result++;
+      }
+      for (int j = i + 1; j < individualPlayScores.size(); j++) {
+         
+        if (sum == finalScore) {
+          result++;
+        }
+      }
+    }
+    return result;
   }
 
   public static void main(String[] args) {

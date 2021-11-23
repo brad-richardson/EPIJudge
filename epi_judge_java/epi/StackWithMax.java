@@ -6,26 +6,34 @@ import epi.test_framework.TestFailure;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Comparator;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.PriorityQueue;
 public class StackWithMax {
 
   public static class Stack {
+    Deque<Integer> items = new ArrayDeque<>();
+    PriorityQueue<Integer> maxValues = new PriorityQueue<>(Comparator.reverseOrder());
+
     public boolean empty() {
-      // TODO - you fill in here.
-      return true;
+      return items.isEmpty();
     }
     public Integer max() {
-      // TODO - you fill in here.
-      return 0;
+      return maxValues.peek();
     }
     public Integer pop() {
-      // TODO - you fill in here.
-      return 0;
+      Integer item = items.removeFirst();
+      maxValues.remove(item);
+      return item;
     }
     public void push(Integer x) {
-      // TODO - you fill in here.
+      items.addFirst(x);
+      maxValues.add(x);
       return;
     }
   }
+  
   @EpiUserType(ctorParams = {String.class, int.class})
   public static class StackOp {
     public String op;

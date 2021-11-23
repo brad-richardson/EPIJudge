@@ -6,8 +6,20 @@ public class IsTreeBalanced {
   @EpiTest(testDataFile = "is_tree_balanced.tsv")
 
   public static boolean isBalanced(BinaryTreeNode<Integer> tree) {
-    // TODO - you fill in here.
-    return true;
+    return balancedHeight(tree) >= 0;
+  }
+
+  // return -1 if unbalanced
+  public static int balancedHeight(BinaryTreeNode<Integer> node) {
+    if (node == null) {
+      return 0;
+    }
+    int leftHeight = balancedHeight(node.left);
+    int rightHeight = balancedHeight(node.right);
+    if (leftHeight < 0 || rightHeight < 0 || Math.abs(leftHeight - rightHeight) > 1) {
+      return -1; // unbalanced
+    }
+    return Math.max(leftHeight, rightHeight) + 1;
   }
 
   public static void main(String[] args) {
